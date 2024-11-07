@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
@@ -5,7 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
     public new Rigidbody2D rigidbody2D;
     public bool grounded = false;
     public float speed = 2.5f;
-    public float jumpStregth = 0.0f;
+    
     private bool facingRight = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -15,8 +16,9 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+
         float horizontalInput = Input.GetAxis("Horizontal"); // Get horizontal input
 
 
@@ -78,15 +80,21 @@ public class PlayerMovementScript : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
        if (collision.collider.CompareTag("Ground"))
+        { 
+            grounded = false;
+        }
+        else
         {
-            grounded=false;
-        } 
+            if (collision.collider.CompareTag("Platform"))
+            {
+                grounded = false;
+            }
+        }
     }
 
     void Jump()
     {
-        rigidbody2D.linearVelocityY = jumpStregth;
-
+        rigidbody2D.linearVelocityY = 13f;
     }
 
 
