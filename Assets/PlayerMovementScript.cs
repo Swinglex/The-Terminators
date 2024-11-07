@@ -4,6 +4,8 @@ public class PlayerMovementScript : MonoBehaviour
 {
     public Rigidbody2D rigidbody2D;
     public bool grounded = false;
+    public float speed;
+    private bool facingRight = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
@@ -14,20 +16,46 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) == true)
+        float horizontalInput = Input.GetAxis("Horizontal"); // Get horizontal input
+
+
+
+        // Move player based on input
+
+        transform.Translate(new Vector2(horizontalInput * speed, 0) * Time.deltaTime);
+
+
+
+        // Flip player if moving in opposite direction
+
+        if (horizontalInput < 0 && facingRight)
+
         {
-            rigidbody2D.linearVelocityX = 2.5f;
+
+            FlipPlayer();
+
         }
 
-        if (Input.GetKey(KeyCode.A) == true)
+        else if (horizontalInput > 0 && !facingRight)
+
         {
-            rigidbody2D.linearVelocityX = -2.5f;
+
+            FlipPlayer();
+
         }
 
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             Jump();
         }
+    }
+
+    void FlipPlayer()
+    {
+
+        facingRight = !facingRight; // Toggle facing direction
+
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
