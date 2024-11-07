@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    public Rigidbody2D rigidbody2D;
+    public new Rigidbody2D rigidbody2D;
     public bool grounded = false;
-    public float speed;
+    public float speed = 2.5f;
     private bool facingRight = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
