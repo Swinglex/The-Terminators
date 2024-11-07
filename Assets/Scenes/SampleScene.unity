@@ -131,16 +131,8 @@ GameObject:
   - component: {fileID: 58109152}
   - component: {fileID: 58109151}
   m_Layer: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_Name: floorBrick (1)
-=======
   m_TagString: Ground
->>>>>>> garrett-branch
-=======
-  m_Name: 
-  m_TagString: Untagged
->>>>>>> garrett-branch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,20 +700,10 @@ GameObject:
   - component: {fileID: 1016878750}
   - component: {fileID: 1016878749}
   - component: {fileID: 1016878751}
-<<<<<<< HEAD
-<<<<<<< HEAD
   - component: {fileID: 1016878752}
-  m_Layer: 6
-=======
   - component: {fileID: 1016878753}
   - component: {fileID: 1016878754}
   m_Layer: 6
->>>>>>> garrett-branch
-=======
-  - component: {fileID: 1016878753}
-  - component: {fileID: 1016878754}
-  m_Layer: 6
->>>>>>> garrett-branch
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,6 +711,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!212 &1016878749
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,14 +810,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Constraints: 0
---- !u!61 &1016878752
-=======
-=======
->>>>>>> garrett-branch
   m_Constraints: 4
+--- !u!61 &1016878752
 --- !u!114 &1016878753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,10 +829,6 @@ MonoBehaviour:
   speed: 5
   jumpStregth: 0
 --- !u!61 &1016878754
-<<<<<<< HEAD
->>>>>>> garrett-branch
-=======
->>>>>>> garrett-branch
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -891,7 +864,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
-  m_Offset: {x: 0.00023610337, y: 0.00015024748}
+  m_Offset: {x: 0.0003, y: 0}
 =======
   m_Offset: {x: 0.0003, y: 0}
 >>>>>>> garrett-branch
@@ -909,7 +882,7 @@ BoxCollider2D:
   m_AutoTiling: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
-  m_Size: {x: 0.0015277934, y: 0.0038995044}
+  m_Size: {x: 0.0012, y: 0.0032}
 =======
   m_Size: {x: 0.0012, y: 0.0032}
 >>>>>>> garrett-branch
