@@ -5,6 +5,7 @@ public class PlayerMovementScript : MonoBehaviour
     public new Rigidbody2D rigidbody2D;
     public bool grounded = false;
     public float speed = 2.5f;
+    public float jumpStregth = 0.0f;
     private bool facingRight = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -77,7 +78,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Jump()
     {
-        rigidbody2D.linearVelocityY = 5;
+        rigidbody2D.linearVelocityY = jumpStregth;
 
     }
 
