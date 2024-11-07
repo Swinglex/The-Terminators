@@ -66,6 +66,13 @@ public class PlayerMovementScript : MonoBehaviour
         {
             grounded = true;
         }
+        else
+        {
+            if (collision.collider.CompareTag("Platform"))
+            {
+                grounded = true;
+            }
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
