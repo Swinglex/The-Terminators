@@ -16,15 +16,15 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) == true)
         {
-            rigidbody2D.linearVelocityX = 1;
+            rigidbody2D.linearVelocityX = 2.5f;
         }
 
         if (Input.GetKey(KeyCode.A) == true)
         {
-            rigidbody2D.linearVelocityX = -1;
+            rigidbody2D.linearVelocityX = -2.5f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKey(KeyCode.Space) && grounded)
         {
             Jump();
         }
