@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Ground
+  - Platform
+  - fist
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,8 +17,6 @@ TagManager:
   - UI
   - Player
   - Attackable
-  - 
-  - 
   - 
   - 
   - 
