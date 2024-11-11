@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ab227fd7e9ca6284eb86486ea871faf1
+guid: c2931ecf7677d1e45891c984e566ce7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6768637590551168458
-    second: FullHealth_0
+      213: -2713231069011661751
+    second: TravelBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FullHealth_0
+      name: TravelBackground_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 48
-        height: 20
+        y: 0
+        width: 150
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63a77d129f7f012a0800000000000000
-      internalID: -6768637590551168458
+      spriteID: 94ca102d7baa85ad0800000000000000
+      internalID: -2713231069011661751
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FullHealth_0: -6768637590551168458
+      TravelBackground_0: -2713231069011661751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
