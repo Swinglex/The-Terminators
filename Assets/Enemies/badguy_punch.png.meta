@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fa062d6f8f49b4b46ba2b162a4956e2f
+guid: f6fd7420553487743a386d9f290dcf54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4090095076119100109
-    second: Player_jumpAndFall_Start_0
+      213: -5046999740825189247
+    second: badguy_punch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_jumpAndFall_Start_0
+      name: badguy_punch_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 28
-        height: 32
+        width: 17
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 335c852d2301d37c0800000000000000
-      internalID: -4090095076119100109
+      spriteID: 18440a2d97475f9b0800000000000000
+      internalID: -5046999740825189247
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Player_jumpAndFall_Start_0: -4090095076119100109
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

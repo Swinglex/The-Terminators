@@ -12,6 +12,7 @@ public class BasicEnemyHealth : MonoBehaviour, IDamageable
 
     public void Damage(float damageAmount)
     {
+        print("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
         currentHealth -= damageAmount;
 
         if (currentHealth < 0) 

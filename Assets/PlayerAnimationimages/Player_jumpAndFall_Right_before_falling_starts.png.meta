@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_jumpAndFall_Right_before_falling_starts_0: 6573222931967853762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
