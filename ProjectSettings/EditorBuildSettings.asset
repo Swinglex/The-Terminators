@@ -14,5 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JarrettFight.unity
     guid: 87849bee2c3290841971aa9805b2252a
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: db3abcae60f053d4d84b4ca4f116acfc, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public SpriteRenderer healthBarRenderer;  
     public float healthAmount = 150f;
@@ -12,11 +12,6 @@ public class HealthBar : MonoBehaviour
             //reloads the scene when the player "dies"
             Application.LoadLevel(Application.loadedLevel);
         }
-
-        if (Input.GetKeyDown(KeyCode.Return)){
-            TakeDamage(10);
-        }
-
     }
 
     public void TakeDamage(float damage){
@@ -32,4 +27,14 @@ public class HealthBar : MonoBehaviour
         int index = Mathf.FloorToInt((1 - (healthAmount / 150f)) * (healthImages.Length - 1));
         healthBarRenderer.sprite = healthImages[index];
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == null)
+        {
+            TakeDamage(10);
+        }
+    }
+
+
 }
