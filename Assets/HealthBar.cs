@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         if (healthAmount <= 0){
+            //reloads the scene when the player "dies"
             Application.LoadLevel(Application.loadedLevel);
         }
 
@@ -19,6 +20,7 @@ public class HealthBar : MonoBehaviour
     }
 
     public void TakeDamage(float damage){
+        //updates the image when the player takes damage
         healthAmount -= damage;
         healthAmount = Mathf.Clamp(healthAmount, 0, 150);
         UpdateHealthImage();
