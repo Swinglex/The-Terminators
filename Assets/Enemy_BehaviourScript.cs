@@ -9,14 +9,14 @@ public class Enemy_BehaviourScript : MonoBehaviour
     public float moveSpeed;
     public float timer;
 
-    private RaycastHit2D hit;
-    private GameObject target;
-    private Animator animator;
-    private float distance;
-    private bool attackMode;
-    private bool inRange;
-    private bool cooling;
-    private float intTimer;
+    public RaycastHit2D hit;         
+    public GameObject target;        
+    public Animator animator; 
+    public float distance;           
+    public bool attackMode;          
+    public bool inRange;             
+    public bool cooling;             
+    public float intTimer;      
 
     private void Awake()
     {
@@ -24,7 +24,6 @@ public class Enemy_BehaviourScript : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (inRange)
@@ -39,14 +38,14 @@ public class Enemy_BehaviourScript : MonoBehaviour
         {
             inRange = false;
         }
-        if (inRange == false)
+        if (!inRange)
         {
             animator.SetBool("canWalk", false);
             StopAttack();
         }
     }
 
-    void EnemyLogic()
+    public void EnemyLogic()
     {
         distance = Vector2.Distance(transform.position, target.transform.position);
 
@@ -55,7 +54,7 @@ public class Enemy_BehaviourScript : MonoBehaviour
             Move();
             StopAttack();
         }
-        else if (attackDistance >= distance && cooling == false) {
+        else if (attackDistance >= distance && !cooling) {
             Attack();
         }
         if (cooling) {
@@ -64,27 +63,25 @@ public class Enemy_BehaviourScript : MonoBehaviour
         }
     }
 
-    void Move()
+    public void Move()
     {
         animator.SetBool("canWalk", true);
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttak"))
         {
             Vector2 tatgetPosition = new Vector2(target.transform.position.x, target.transform.position.y);
-
             transform.position = Vector2.MoveTowards(transform.position, tatgetPosition, moveSpeed * Time.deltaTime);
         }
     }
 
-    void Attack()
+    public void Attack()
     {
         timer = intTimer;
         attackMode = true;
-
         animator.SetBool("canWalk", false);
         animator.SetBool("Attack", true);
     }
 
-    void Cooldown()
+    public void Cooldown()
     {
         timer -= Time.deltaTime;
 
@@ -94,7 +91,7 @@ public class Enemy_BehaviourScript : MonoBehaviour
         }
     }
 
-    void StopAttack()
+    public void StopAttack()
     {
         cooling = false;
         attackMode= false;
@@ -103,25 +100,25 @@ public class Enemy_BehaviourScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             target = collision.gameObject;
             inRange = true;
         }
     }
 
-    void RaycastDebugger()
+    public void RaycastDebugger()
     {
         if (distance > attackDistance) {
             Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.red);
         }
         else if (attackDistance > distance){ 
-            Debug.DrawRay(rayCast.position,Vector2.left* rayCastLength, Color.green);
+            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.green);
         }
     }
 
     public void TriggerCooling()
     {
-        cooling= true;
+        cooling = true;
     }
 }
